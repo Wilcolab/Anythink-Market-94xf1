@@ -4,6 +4,7 @@ var Item = mongoose.model("Item");
 var Comment = mongoose.model("Comment");
 var User = mongoose.model("User");
 var auth = require("../auth");
+var Name = mongoose.model("Name");
 const { sendEvent } = require("../../lib/event");
 
 // Preload item objects on routes with ':item'
@@ -36,7 +37,7 @@ router.param("comment", function(req, res, next, id) {
     .catch(next);
 });
 
-router.get("/$filter 'title'", auth.optional, function(req, res, next) {
+router.get("/$filter=Name eq'title'", auth.optional, function(req, res, next) {
   var query = {};
   var limit = 100;
   var offset = 0;
