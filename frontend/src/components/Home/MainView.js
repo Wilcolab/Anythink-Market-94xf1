@@ -53,6 +53,7 @@ const TagFilterTab = (props) => {
     <li className="nav-item">
       <button type="button" className="nav-link active">
         <i className="ion-pound">{props.tag}</i> 
+        <i className="ion-pound"></i> {props.tag}
       </button>
     </li>
   );
