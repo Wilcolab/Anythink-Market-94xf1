@@ -67,5 +67,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+<<<<<<< HEAD
+=======
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+>>>>>>> c77aa3dba8224abc8c7b93c6d71ae028bf2e66d7
   }
 }

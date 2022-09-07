@@ -58,3 +58,7 @@ For setting up oour local environment, we would need Docker to be installed,
 
 
 *CONGRATS, you have successfully set up you environment*
+## How to run locally?
+1. [Install Docker](https://docs.docker.com/get-docker/)
+2. [Install Docker Compose](https://docs.docker.com/compose/install/)
+3. Run `docker-compose up`. 
