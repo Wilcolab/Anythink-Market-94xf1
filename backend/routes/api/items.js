@@ -4,6 +4,7 @@ var Item = mongoose.model("Item");
 var Comment = mongoose.model("Comment");
 var User = mongoose.model("User");
 var auth = require("../auth");
+// var Name = mongoose.model("Name");
 const { sendEvent } = require("../../lib/event");
 
 // Preload item objects on routes with ':item'
@@ -36,6 +37,7 @@ router.param("comment", function(req, res, next, id) {
     .catch(next);
 });
 
+// router.get("/'", auth.optional, function(req, res, next) {
 router.get("/", auth.optional, function(req, res, next) {
   var query = {};
   var limit = 100;
@@ -51,6 +53,10 @@ router.get("/", auth.optional, function(req, res, next) {
 
   if (typeof req.query.tag !== "undefined") {
     query.tagList = { $in: [req.query.tag] };
+  }
+
+  if  (typeof req.query.title !== "undefined") {
+    query.title =  { "$regex": req.query.title, "$options": "i" };
   }
 
   Promise.all([
@@ -332,4 +338,5 @@ router.delete("/:item/comments/:comment", auth.required, function(
   }
 });
 
+module.exports = router;
 module.exports = router;

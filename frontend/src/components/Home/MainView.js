@@ -52,6 +52,7 @@ const TagFilterTab = (props) => {
   return (
     <li className="nav-item">
       <button type="button" className="nav-link active">
+        <i className="ion-pound">{props.tag}</i>
         <i className="ion-pound"></i> {props.tag}
       </button>
     </li>
@@ -92,6 +93,7 @@ const MainView = (props) => {
         loading={props.loading}
         itemsCount={props.itemsCount}
         currentPage={props.currentPage}
+        title={props.title}
       />
     </div>
   );

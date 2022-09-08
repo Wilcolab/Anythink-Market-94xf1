@@ -7,6 +7,20 @@ const ItemList = (props) => {
     return <div className="py-4">Loading...</div>;
   }
 
+  if (props.items?.length === 0) {
+    if (props.title?.length > 2) {
+      return (
+        <div id="empty" className="py-4">
+          <div className="d-flex flex-column mt-4">
+            <div className="d-flex justify-content-center mt-4">
+              No items found for "<strong>{props.title}</strong>"
+            </div>
+          </div>
+        </div>
+      );
+    }
+  }
+
   if (props.items.length === 0) {
     return <div className="py-4 no-items">No items are here... yet.</div>;
   }
