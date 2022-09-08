@@ -9,7 +9,7 @@ const Banner = () => {
         <img src={logo} alt="banner" />
         <div>
           <span id="get-part">A place to get</span>
-          <SearchBar/>
+          <SearchBar />
           <span> the cool stuff.</span>
         </div>
       </div>
