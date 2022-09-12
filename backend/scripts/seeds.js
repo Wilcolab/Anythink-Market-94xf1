@@ -64,6 +64,7 @@ async function populate() {
   console.log("seeded users,items & comments");
 }
 
+
 (async () => {
   await populate();
   process.exit();
