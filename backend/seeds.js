@@ -58,7 +58,7 @@ async function populate() {
   for (let i = 0; i < 100; i++) {
     const userId = await seedUser();
     const item = await seedItem(userId);
-    await seedItem(userId, item);
+    await seedComment(userId, item);
   }
   console.log("seeded users,items & comments");
 }
